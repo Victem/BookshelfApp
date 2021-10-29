@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace BookshelfApp.Models
 {
-    public class Book : PrintingProduction, IMeasurable, IMeasureProvider
+    public class Book : PrintingProduction, IMeasurable, IMeasureProvider<PrintingProduction>
     {
         public string Name { get; set; }
 
         public string Author { get; set; }
 
-        public IMeasurer Measurer { get; set; } = new BookMeasurer();
+        public IMeasurer<PrintingProduction> Measurer { get; set; } = new BookMeasurer();
 
         public double GetWidth()
         {

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace BookshelfApp.Models
 {
     [PageSize(1.5)]
-    public class Album : PrintingProduction, IMeasurable, IMeasureProvider
+    public class Album : PrintingProduction, IMeasurable, IMeasureProvider<PrintingProduction>
     {
-        public IMeasurer Measurer { get; set; } = new BookMeasurer();
+        public IMeasurer<PrintingProduction> Measurer { get; set; } = new BookMeasurer();
 
         public double GetWidth()
         {

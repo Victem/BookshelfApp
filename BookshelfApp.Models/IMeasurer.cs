@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace BookshelfApp.Models
 {
-    public interface IMeasurer
+    public interface IMeasurer<TEntity>
     {
-        double Calculate(object entity);
-    }
-
-    public interface IMeasurer<TEntity> : IMeasurer
-    {
+        //double Calculate(object entity);
         double Calculate(TEntity entity);
     }
+
+    //public interface IMeasurer<TEntity> : IMeasurer
+    //{
+    //}
 }

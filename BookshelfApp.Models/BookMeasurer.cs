@@ -22,10 +22,5 @@ namespace BookshelfApp.Models
             }
             return entity.Pages * 0.5;
         }
-
-        public double Calculate(object entity)
-        {
-            return Calculate(entity as PrintingProduction);
-        }
     }
 }

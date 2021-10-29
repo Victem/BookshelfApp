@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BookshelfApp.Models
 {
-    interface IMeasureProvider
+    interface IMeasureProvider<T>
     {
-        IMeasurer Measurer { get; set; }
+        IMeasurer<T> Measurer { get; set; }
     }
 }
