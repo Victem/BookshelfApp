@@ -34,5 +34,7 @@ namespace BookshelfApp.Models
         {
             return AvailableSpace - item.GetWidth() >= 0;
         }
+
+        public IEnumerable<IMeasurable> Items { get => items.Select(i => i); }
     }
 }
